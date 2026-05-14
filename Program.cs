@@ -1,7 +1,14 @@
+using Microsoft.EntityFrameworkCore;
+using SharedCents.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+// Connect SQLite database
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("SharedCentsContext")));
 
 var app = builder.Build();
 
