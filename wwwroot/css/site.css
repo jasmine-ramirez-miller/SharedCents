@@ -29,3 +29,112 @@ body {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
 }
+
+/* SharedCents Custom Theme */
+
+body {
+    background-color: #F8F3EA;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #8B4A2B;
+}
+
+/* Navbar */
+.shared-navbar {
+    background-color: #1E8A8A;
+    padding: 12px 0;
+}
+
+.navbar-brand {
+    color: #D93B76 !important;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-link {
+     color: #8B4A2B !important;
+    margin-left: 12px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #E6A826 !important;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #F26522;
+    border-color: #F26522;
+}
+
+.btn-primary:hover {
+    background-color: #D93B76;
+    border-color: #D93B76;
+}
+
+/* Tables */
+table {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th {
+    background-color: #1E8A8A;
+    color: white;
+}
+
+/* Headings */
+h1, h2, h3 {
+    color: #8B4A2B;
+    font-weight: bold;
+}
+
+/* Links */
+a {
+    color: #D93B76;
+}
+
+a:hover {
+    color: #F26522;
+}
+
+/* Home Page */
+.hero-section {
+    background-color: #ffffff;
+    border-left: 8px solid #D93B76;
+}
+
+.hero-section p {
+    color: #8B4A2B;
+}
+
+.card-title {
+    color: #D93B76;
+    font-weight: bold;
+}
+
+.card {
+    border-radius: 16px;
+}
+
+.card-text {
+    color: #8B4A2B;
+}
+
+.btn-outline-secondary {
+    color: #8B4A2B;
+    border-color: #8B4A2B;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #E6A826;
+    border-color: #E6A826;
+    color: white;
+}
+
+.shared-alert {
+    background-color: #fff7e6;
+    color: #8B4A2B;
+    border-left: 6px solid #E6A826;
+}

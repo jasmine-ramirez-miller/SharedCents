@@ -1,10 +1,75 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<!-- Hero Section -->
+<div class="hero-section p-5 mb-4 rounded-4 shadow-sm">
+    <div class="container-fluid py-4">
+
+        <!-- Main Application Title -->
+        <h1 class="display-5 fw-bold">Welcome to SharedCents</h1>
+
+        <!-- Short Application Description -->
+        <p class="col-md-8 fs-5">
+            SharedCents helps partners organize shared expenses, track who each bill belongs to,
+            and keep household budgeting simple and clear.
+        </p>
+
+        <!-- Navigation Buttons -->
+        <a class="btn btn-primary btn-lg me-2" asp-page="/Expenses/Index">
+            View Expenses
+        </a>
+
+        <a class="btn btn-outline-secondary btn-lg" asp-page="/Partners/Index">
+            View Partners
+        </a>
+    </div>
+</div>
+
+<!-- Feature Cards Section -->
+<div class="row text-center mb-4">
+
+    <!-- Expense Tracking Card -->
+    <div class="col-md-4 mb-3">
+        <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+                <h5 class="card-title">Track Expenses</h5>
+                <p class="card-text">
+                    Add rent, utilities, groceries, subscriptions, and other shared bills in one place.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Partner Management Card -->
+    <div class="col-md-4 mb-3">
+        <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+                <h5 class="card-title">Connect Partners</h5>
+                <p class="card-text">
+                    Link each expense to a partner so it is easy to see who is connected to each bill.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Organization Card -->
+    <div class="col-md-4 mb-3">
+        <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+                <h5 class="card-title">Stay Organized</h5>
+                <p class="card-text">
+                    Use categories, due dates, and paid status to keep your shared budget on track.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Project Information Alert -->
+<div class="alert shared-alert shadow-sm" role="alert">
+    <strong>Project Goal:</strong> SharedCents was created as an ASP.NET Core Razor Pages application
+    using Entity Framework Core to manage related budget data.
 </div>
