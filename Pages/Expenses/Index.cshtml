@@ -1,0 +1,72 @@
+@page
+@model SharedCents.Pages.Expenses.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Expense[0].ExpenseName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Expense[0].Category)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Expense[0].Amount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Expense[0].DueDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Expense[0].IsPaid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Expense[0].IsShared)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Expense[0].Partner)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Expense) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExpenseName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Amount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DueDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsPaid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsShared)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Partner.Email)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ExpenseId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ExpenseId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ExpenseId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

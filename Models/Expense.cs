@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using System.ComponentModel.DataAnnotations;
 
 namespace SharedCents.Models
@@ -35,6 +36,7 @@ namespace SharedCents.Models
 
         // Navigation Property
         // Each Expense belongs to one Partner
+        [ValidateNever]
         public Partner Partner { get; set; }
     }
 }
